@@ -1,0 +1,201 @@
+:root {
+  /* Typography & base settings */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Color scheme */
+  color-scheme: light dark;
+  --color-primary: #4f46e5; /* Indigo */
+  --color-secondary: #6366f1;
+  --color-bg-dark: #1e1e2f;
+  --color-bg-light: #f8f9fc;
+  --color-text-dark: #f1f1f5;
+  --color-text-light: #1a1a1a;
+  --color-surface-dark: #2a2a3c;
+  --color-surface-light: #ffffff;
+  --color-border-dark: #3a3a4a;
+  --color-border-light: #e0e0e0;
+  --success: #22c55e;
+  --info: #3b82f6;
+  --danger: #ef4444;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  text-align: center;
+  margin: 30px 0;
+  color: var(--color-primary);
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Card styles */
+.result-card,
+.upload-form {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--color-surface-dark);
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Form inputs */
+.upload-form textarea,
+.upload-form input[type="text"],
+.upload-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border-dark);
+  background-color: #2f2f42;
+  color: var(--color-text-dark);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.upload-form textarea::placeholder,
+.upload-form input::placeholder {
+  color: #aaa;
+}
+
+.upload-form input:focus,
+.upload-form textarea:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  outline: none;
+}
+
+/* Progress bar */
+.progress-bar {
+  background: #2f2f42;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: 20px;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transition: width 0.3s ease;
+}
+
+/* Skill highlighting */
+.found-skills {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.matched-skills {
+  color: var(--info);
+  font-weight: 500;
+}
+
+.missing-skills {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-light);
+  }
+
+  .result-card,
+  .upload-form {
+    background-color: var(--color-surface-light);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .upload-form input,
+  .upload-form textarea {
+    background-color: #fff;
+    border: 1px solid var(--color-border-light);
+    color: var(--color-text-light);
+  }
+
+  .progress-bar {
+    background: #e5e7eb;
+  }
+
+  button {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+
+  button:hover {
+    background-color: var(--color-secondary);
+  }
+}

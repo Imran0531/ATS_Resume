@@ -1,0 +1,116 @@
+.upload-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 0 10px;
+}
+
+.upload-form {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.upload-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.upload-form textarea,
+.upload-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.upload-form input[type="file"] {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.upload-form button {
+  padding: 10px 20px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.upload-form button:hover:not(:disabled) {
+  background: #115293;
+}
+
+.upload-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.result-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  height: 24px;
+}
+
+.progress-bar-inner {
+  padding: 4px 0;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.found-skills {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.matched-skills {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.missing-skills {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.result-card ol {
+  padding-left: 20px;
+}
+
+.result-card li {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .upload-container {
+    padding: 0 5px;
+  }
+  .upload-form button {
+    width: 100%;
+  }
+}

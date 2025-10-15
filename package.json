@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://<Imran0531>.github.io/<repo-name>",
+  "homepage": "https://<Imran0531>.github.io/<ATS_Resume>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
